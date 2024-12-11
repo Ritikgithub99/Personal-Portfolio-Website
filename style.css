@@ -266,7 +266,7 @@ section{
     }
 }
 
-@media (max-width:440px){
+@media (max-width:1200px){
     .main-container .image{
         width: 50%;
         height: 60%;
@@ -292,3 +292,29 @@ section{
 
 
 
+
+/* Additional responsiveness adjustments */
+@media (max-width: 600px) {
+    .nav-container .logo {
+        font-size: 1.2rem;
+    }
+    .main-container .content {
+        width: 90%;
+    }
+    .social-links i {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+    .main-container .image {
+        width: 70%;
+        height: auto;
+    }
+    .content p {
+        font-size: 0.8rem;
+    }
+    .content button {
+        font-size: 1rem;
+        width: 70%;
+    }
+}
