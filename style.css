@@ -39,6 +39,16 @@ nav{
     text-shadow: 0 0 10px #077b32;
 }
 
+/* Add required CSS fixes for better mobile compatibility */
+.dropdown {
+    z-index: 999; /* Ensure it's above all other elements */
+    transform: translateY(-500px);
+    transition: transform 0.3s ease-in-out;
+}
+.nav-container .hamburg {
+    display: block; /* Always visible in mobile view */
+}
+
 .hamburg,
 .cancel{
     cursor: pointer;
