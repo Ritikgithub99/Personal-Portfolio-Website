@@ -6,16 +6,14 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
 body{
     width: 100%;
-    min-height: 100vh; /* Use min-height instead of fixed height */
-    overflow-x: hidden; /* Prevent horizontal scroll issues */
+    height: 100vh;
+    overflow: hidden;
     background-color: black;
 }
-html, body {
-    touch-action: manipulation;
-    overflow-x: hidden;
-}
+
 nav{
     width: 100%;
     height: 10vh;
@@ -123,48 +121,33 @@ nav{
 
 section{
     width: 100%;
-    min-height: 100vh; /* Adjust dynamically to the viewport */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 90vh;
 }
 
 .main-container{
-     display: flex;
-    justify-content: space-between; /* Spread items evenly */
-    align-items: center; /* Center vertically */
-    padding: 20px; /* Add spacing for desktop layout */
-}
-.main-container .image{
-    width: 300px; /* Adjust width for a circular image */
-    height: 300px; /* Ensure height matches width for a perfect circle */
-    border-radius: 50%; /* Makes the image circular */
-    overflow: hidden; /* Ensures the image stays within the circle */
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional shadow for a polished look */
-    margin: 0 auto; /* Center the image */
+}
+
+.main-container .image{
+    width: 500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #077b32;
 }
 
 .main-container .image img{
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image fills the circle */
 }
 
 .main-container .image:hover{
     animation: animate 1.5s ease-in-out infinite;
 }
-img {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-}
 
-.content {
-    padding: 10px; /* Add padding for better spacing */
-}
 @keyframes animate {
     0%{
         scale: 1;
@@ -295,8 +278,9 @@ img {
 
 @media (max-width:1200px){
     .main-container .image{
-        width: 600px;
-        height: auto;
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
     }
 
     .main-container .content{
@@ -307,21 +291,40 @@ img {
         margin-top: 15px;
     }
 }
-@media (min-width: 1200px) {
-    .main-container .image {
-        width: 600px; /* Larger width for desktop screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Additional responsiveness adjustments */
 @media (max-width: 600px) {
-    .main-container .image {
-        width: 90%; /* Ensure it fits well within the viewport */
-        height: auto; /* Maintain aspect ratio */
-        margin: 0 auto; /* Center the image */
+    .nav-container .logo {
+        font-size: 1.2rem;
     }
-    .main-container {
-        align-items: center; /* Center content vertically */
+    .main-container .content {
+        width: 90%;
+    }
+    .social-links i {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+    .main-container .image {
+        width: 70%;
+        height: auto;
+    }
+    .content p {
+        font-size: 0.8rem;
+    }
+    .content button {
+        font-size: 1rem;
+        width: 70%;
     }
 }
