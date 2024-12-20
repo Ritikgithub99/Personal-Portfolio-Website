@@ -294,11 +294,12 @@ section{
     .main-container button{
         margin-top: 15px;
     }
+}
+@media (min-width: 1200px) {
     .hamburg {
         display: none; /* Hide the hamburger menu on desktop */
     }
 }
-
 
 
 
