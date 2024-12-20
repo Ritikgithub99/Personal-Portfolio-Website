@@ -15,7 +15,7 @@ body{
 }
 img {
     max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: 150vh; /* Maintain aspect ratio */
     position: fixed
 }
 
