@@ -294,6 +294,9 @@ section{
     .main-container button{
         margin-top: 15px;
     }
+    .hamburg {
+        display: none; /* Hide the hamburger menu on desktop */
+    }
 }
 
 
