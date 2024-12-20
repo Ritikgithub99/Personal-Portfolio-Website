@@ -3,6 +3,18 @@ function hamburg() {
     navbar.style.transform = "translateY(0px)";
     navbar.style.zIndex = "1000";
 }
+function updateHamburgerVisibility() {
+    const hamburger = document.querySelector(".hamburg");
+    if (window.innerWidth >= 1200) {
+        hamburger.style.display = "none"; // Hide on desktop
+    } else {
+        hamburger.style.display = "block"; // Show on mobile
+    }
+}
+
+// Run on load and resize
+window.onload = updateHamburgerVisibility;
+window.onresize = updateHamburgerVisibility;
 
 function cancel() {
     const navbar = document.querySelector(".dropdown");
