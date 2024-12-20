@@ -46,3 +46,4 @@ function eraseText() {
 }
 
 window.onload = typeWriter;
+document.body.style.overflow = "auto"; // Ensure scrolling is enabled
