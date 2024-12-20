@@ -132,15 +132,21 @@ section{
 }
 
 .main-container .image{
-    width: 400px; /* Set a fixed width for desktop */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Prevent overflow */
+    width: 300px; /* Adjust width for a circular image */
+    height: 300px; /* Ensure height matches width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional shadow for a polished look */
     margin: 0 auto; /* Center the image */
-    display: block; /* Ensure proper layout */
 }
 
 .main-container .image img{
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle */
 }
 
 .main-container .image:hover{
