@@ -301,6 +301,13 @@ section{
      .nav-container .links{
         display: block;
     }
+     .hamburg,
+    .cancel {
+        display: none; /* Ensure it's hidden for larger screens */
+    }
+    .nav-container .links {
+        display: flex; /* Restore default desktop navigation */
+    }
 }
    
 
