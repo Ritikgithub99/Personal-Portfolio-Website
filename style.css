@@ -61,7 +61,7 @@ nav{
 }
 
 .nav-container .links{
-    display: none;
+    display: flex;
 }
 
 .nav-container .links a{
