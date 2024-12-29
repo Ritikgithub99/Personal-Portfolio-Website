@@ -298,8 +298,11 @@ section{
     .main-container button{
         margin-top: 15px;
     }
+     .nav-container .links{
+        display: none;
+    }
 }
-
+   
 
 
 
