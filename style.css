@@ -299,14 +299,11 @@ section{
         margin-top: 15px;
     }
      .nav-container .links{
-        display: block;
+        display: flex;
     }
      .hamburg,
     .cancel {
         display: none; /* Ensure it's hidden for larger screens */
-    }
-    .nav-container .links {
-        display: flex; /* Restore default desktop navigation */
     }
 }
    
