@@ -9,8 +9,19 @@ function cancel() {
     navbar.style.transform = "translateY(-500px)";
 }
 
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+    const navbar = document.querySelector(".dropdown");
+    const hamburgMenu = document.querySelector(".hamburg");
+
+    if (!navbar.contains(event.target) && !hamburgMenu.contains(event.target)) {
+        navbar.style.transform = "translateY(-500px)";
+    }
+});
+
+
 // Typewriter Effect
-const texts = ["DEVELOPER", "DESIGNER", "PROGRAMMER"];
+const texts = ["DEVELOPER", "DESIGNER"];
 
 let speed = 100;
 const textElements = document.querySelector(".typewriter-text");
