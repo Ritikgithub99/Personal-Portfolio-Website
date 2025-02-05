@@ -262,9 +262,12 @@ section{
         display: none;
     }
 
-    .hamburg,
-    .cancel{
-        display: block;
+    .nav-container .links {
+        display: none; /* Hide navigation links in mobile view */
+    }
+
+    .hamburg {
+        display: block; /* Show hamburger menu on mobile */
     }
 
     .main-container .content{
@@ -283,7 +286,15 @@ section{
         height: 60%;
     }
 }
+@media (min-width: 885px) {
+    .hamburg {
+        display: none !important; /* Hide hamburger menu on larger screens */
+    }
 
+    .nav-container .links {
+        display: flex !important; /* Ensure links are shown on larger screens */
+    }
+}
 @media (max-width:1200px){
     .main-container .image{
         width: 50%;
