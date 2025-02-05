@@ -49,17 +49,6 @@ nav{
     display: block; /* Always visible in mobile view */
 }
 
-.hambur,
-.cancel{
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    color: white;
-    display: none;
-    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
-}
-
 .nav-container .links{
     display: flex;
 }
