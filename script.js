@@ -1,25 +1,3 @@
-function hamburg() {
-    const navbar = document.querySelector(".dropdown");
-    navbar.style.transform = "translateY(0px)";
-    navbar.style.zIndex = "1000";
-}
-
-function cancel() {
-    const navbar = document.querySelector(".dropdown");
-    navbar.style.transform = "translateY(-500px)";
-}
-
-// Close dropdown when clicking outside
-document.addEventListener("click", function (event) {
-    const navbar = document.querySelector(".dropdown");
-    const hamburgMenu = document.querySelector(".hamburg");
-
-    if (!navbar.contains(event.target) && !hamburgMenu.contains(event.target)) {
-        navbar.style.transform = "translateY(-500px)";
-    }
-});
-
-
 // Typewriter Effect
 const texts = ["DEVELOPER", "DESIGNER"];
 
@@ -51,3 +29,10 @@ function eraseText() {
 }
 
 window.onload = typeWriter;
+document.querySelector('.hamburg').addEventListener('click', function () {
+    document.querySelector('.dropdown').classList.add('active');
+});
+
+document.querySelector('.cancel').addEventListener('click', function () {
+    document.querySelector('.dropdown').classList.remove('active');
+});
