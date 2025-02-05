@@ -49,7 +49,7 @@ nav{
     display: block; /* Always visible in mobile view */
 }
 
-.hamburg,
+.hambur,
 .cancel{
     cursor: pointer;
     position: absolute;
@@ -258,9 +258,6 @@ section{
         flex-direction: column;
     }
 
-    .nav-container .links{
-        display: none;
-    }
 
     .nav-container .links {
         display: none; /* Hide navigation links in mobile view */
