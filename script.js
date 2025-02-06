@@ -27,12 +27,3 @@ function eraseText() {
         setTimeout(typeWriter, 500);
     }
 }
-
-window.onload = typeWriter;
-document.querySelector('.hamburg').addEventListener('click', function () {
-    document.querySelector('.dropdown').classList.add('active');
-});
-
-document.querySelector('.cancel').addEventListener('click', function () {
-    document.querySelector('.dropdown').classList.remove('active');
-});
