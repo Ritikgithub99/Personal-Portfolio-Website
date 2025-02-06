@@ -274,3 +274,72 @@ section{
         width: 40%;
     }
 }
+/* Add more media queries for different screen sizes */
+@media screen and (max-width: 1200px) {
+    .main-container .content {
+        width: 60%; /* Adjust width for medium screens */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-container .content {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container .content {
+        width: 90%; /* Full width on mobile */
+    }
+
+    .main-container .image {
+        max-width: 80%; /* Adjust image size */
+    }
+
+    .content h1 {
+        font-size: clamp(1rem, 1rem + 5vw, 1.5rem); /* Responsive heading */
+    }
+
+    .content .typewriter {
+        font-size: clamp(1rem, 1rem + 5vw, 2rem); /* Responsive typewriter text */
+    }
+
+    .content p {
+        font-size: clamp(0.4rem, 0.2rem + 9vw, 0.9rem); /* Responsive paragraph */
+    }
+
+    .social-links i {
+        width: 2.5rem; /* Smaller icons on mobile */
+        height: 2.5rem;
+    }
+
+    .content button {
+        width: 80%; /* Button width adjustment */
+    }
+}
+
+/* Ensure the dropdown menu is full screen */
+.dropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown.active {
+    transform: translateY(0);
+}
+
+/* Adjust link styles in dropdown for better visibility */
+.dropdown .links a {
+    font-size: 1.5rem; /* Larger font size for mobile */
+    padding: 15px 0;
+}
