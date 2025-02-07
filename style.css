@@ -1,184 +1,235 @@
-/* Global Styles */
-* {
+*{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: poppins, sans-serif;
+    font-family: poppins,sans-serif;
     text-decoration: none;
 }
-
-body {
+body{
     overflow-x: hidden;
 }
-
-.hero-header {
-    width: 100%;
+.hero-header{
+    width:100%;
+    height: 100%;
     min-height: 100vh;
     background: #222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
-.wrapper {
-    width: 100%;
-    max-width: 1280px;
+.wrapper{
+    width:1280px;
+    max-width: 95%;
+    margin: 0 auto;
     padding: 0 20px;
-    margin: auto;
 }
-
-/* Header */
-header {
-    padding: 20px;
+header{
+    padding: 40px 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
-
-.logo {
-    display: flex;
+.logo{
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
 }
-
-.logo i {
+.logo i{
     height: 45px;
-    width: 45px;
+    width:45px;
     background-color: #007ced;
     border-radius: 50%;
-    color: #fff;
+    color:#fff;
+    font-weight: 700;
     font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+    
 }
-
-.logo .logo-text {
-    font-size: 22px;
-    color: #fff;
+.logo .logo-text{
+    font-size: 24px;
+    font-weight: 500;
+    color:#fff;
 }
-
-/* Navigation */
-nav .togglebtn {
+nav .togglebtn{
     width: 35px;
     height: 35px;
     position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
+    top:45px;
+    right: 3%;
+    z-index: 5;
     cursor: pointer;
     display: none;
 }
+nav .togglebtn span{
+    display: block;
+    background-color: #007ced;
+    margin: 5px 0px;
+    width:100%;
+    height:3px;
+    transition: 0.3s;
+    transition-property:  transform, opacity;
 
-nav .navlinks {
-    list-style: none;
-    display: flex;
-    gap: 20px;
 }
-
-nav .navlinks li a {
-    color: #e5e5e5;
-    font-size: 16px;
+nav .navlinks{
+    list-style-type: none;
 }
-
-/* Hero Section */
+nav .navlinks li{
+    display: inline-block;
+}
+nav .navlinks li a{
+     color:#e5e5e5;
+     margin-right: 2.5rem;
+}
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 40px 20px;
+    padding-top:4rem;
 }
-
-.hero-pic {
-    width: 250px;
-    height: 250px;
+.container .hero-pic{
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    border: 10px solid #444;
-    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
 }
-
-.hero-pic img {
-    width: 100%;
+.hero-pic img{
     height: 100%;
-    object-fit: cover;
+    width:100%;
     transition: 0.5s;
 }
-
-.hero-pic img:hover {
-    transform: scale(1.1);
+.hero-pic img:hover{
+    transform: scale(1.2);
 }
-
-.hero-text {
+.hero-text{
     max-width: 500px;
-    padding: 20px;
-    color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
 }
-
-.hero-text h1 {
+.hero-text h5{
+    color:#e5e5e5;
+    font-size: 14px;
+}
+.hero-text h5 span{
+    color:#007ced;
+    font-size: 16px;
+}
+.hero-text h1{
     color: #007ced;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
+.hero-text p{
+    color:#e5e5e5;
 
-.btn-group {
-    margin-top: 20px;
 }
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
+.btn-group{
+    margin:45px 0;
+}
+.btn-group .btn{
+    border-color: #d5d5d5;
+    color:#fff;
+    background-color: #333;
+    padding: 12px 25px;
+    margin: 5px 0px;
+    margin-right:7px;
     border-radius: 30px;
-    background: #333;
-    color: #fff;
-    border: 2px solid #e5e5e5;
-    margin: 5px;
-    transition: 0.3s;
+    border:2px solid #e5e5e5;
+    box-shadow:  0 10px 10px -8px rgb(0 0 0 / 78%);
 }
-
-.btn:hover {
-    background: #007ced;
+.btn.active{
     border-color: #007ced;
 }
-
-/* Responsive Design */
-@media (max-width: 930px) {
-    nav .togglebtn {
-        display: block;
+.hero-text .social i{
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+.hero-text .social i:hover{
+    color:#007ced;
+    transform: rotate(360deg);
+}
+/* Respnosiv design & displaying navbar for small screen */
+@media(max-width:930px)
+{
+    nav .togglebtn{
+        display: initial;
     }
-    
-    nav .navlinks {
+    /* for toggle button**/
+    .click {
+        top:45px;
+    }
+    .click span{
         position: absolute;
-        top: 60px;
-        right: -100%;
+        margin-top:12px
+    }
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2)
+    {
+        opacity: 0;
+        margin:0;
+    }
+    .click span:last-child{
+        transform: rotate(45deg);
+        top:0;
+    }
+    nav .navlinks{
+        position: absolute;
+        top:110px;
+        right:-100%;
+        bottom: 0;
         width: 60%;
         height: 100vh;
-        background: #222;
-        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        transition: right 0.3s ease;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
     }
-    
-    nav .navlinks.open {
-        right: 0;
+    nav .navlinks li{
+        display: block;
     }
-    
-    nav .navlinks li {
+    nav .navlinks li a{
         display: block;
         margin-bottom: 15px;
+        text-align: center;
+    }
+    nav .navlinks.open{
+        right:0;
     }
 }
-
-@media (max-width: 768px) {
-    .container {
+@media(max-width:768px)
+{
+    .container{
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top:2rem
     }
-    
-    .hero-text h1 {
-        font-size: 2rem;
+    .hero-text{
+        padding:40px 0px;
+    }
+    nav .togglebtn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+    .hero-text {
+        padding: 20px;
+    }
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-text .social {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 }
