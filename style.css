@@ -115,6 +115,9 @@ section{
     width: 100%;
     height: 90vh;
 }
+.content h2 p{
+    font-size: 1.2rem;
+}
 .main-container{
     width: 100%;
     height: 100%;
@@ -154,7 +157,7 @@ section{
 }
 .typewriter span::before{
     content: "Developer";
-    animation: words 15s infinite;
+    animation: words 5s infinite;
 }
 .typewriter span::after{
     content: "";
@@ -175,9 +178,6 @@ section{
     }
     34%, 66%{
         content: "Designer";
-    }
-    67%, 100%{
-        content: "Youtuber";
     }
 }
 .content p{
